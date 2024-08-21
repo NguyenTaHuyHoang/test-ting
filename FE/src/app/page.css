@@ -1,11 +1,108 @@
+/* General page styles */
+.container {
+    flex-direction: column;
+    align-items: center; /* Align items horizontally centered */
+    min-height: 100vh; /* Ensure container occupies full height */
+    text-align: center;
+    padding: 20px;
+}
 
-/* 
-    This is the CSS file for the page component. 
-    It contains the styles for the header of the page.
-*/
 .header { 
     background-color: #333;
     color: white;
     padding: 1em;
     text-align: center;
+}
+
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Table styles */
+.kols-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* For positioning the scroll animations */
+    table-layout: fixed;
+}
+
+/* Table headers */
+.kols-table th, .kols-table td {
+    border: 1px solid #ffffff;
+    padding: 12px; /* Increase padding for better readability */
+    text-align: center; /* Center-align table content */
+}
+
+.kols-table th {
+    background-color: #4f5abe;
+    color: white;
+}
+
+.kols-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for even rows */
+    color: black;
+}
+
+.kols-table tr:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: black;
+}
+
+/* Scroll buttons */
+.scroll-buttons {
+    margin-top: 30px;
+}
+
+.scroll-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.page-indicator {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Scroll animation classes */
+.scroll-up {
+    animation: scroll-up-animation 0.5s ease-in-out;
+}
+
+.scroll-down {
+    animation: scroll-down-animation 0.5s ease-in-out;
+}
+
+/* Keyframes for scroll up animation */
+@keyframes scroll-up-animation {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for scroll down animation */
+@keyframes scroll-down-animation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

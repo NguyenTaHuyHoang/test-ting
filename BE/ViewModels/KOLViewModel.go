@@ -1,6 +1,8 @@
 package ViewModels
 
-import "wan-api-kol-event/DTO"
+import (
+	"wan-api-kol-event/DTO"
+)
 
 type KolViewModel struct {
 	Result       string        `json:"result"`       //Result : success, unsuccess
